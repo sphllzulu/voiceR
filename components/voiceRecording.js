@@ -16,7 +16,7 @@ export default function AudioRecording() {
 
   async function loadFonts() {
     await Font.loadAsync({
-      Outfit: require('../assets/fonts/Outfit-VariableFont_wght.ttf'), // Ensure to have this file in assets/fonts folder
+      Outfit: require('../assets/fonts/Outfit-VariableFont_wght.ttf'), 
     });
     setFontsLoaded(true);
   }
@@ -31,6 +31,7 @@ export default function AudioRecording() {
       console.error("Failed to load recordings:", error);
     }
   }
+
 
   async function saveRecordings(updatedRecordings) {
     try {
@@ -142,7 +143,10 @@ export default function AudioRecording() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.header}>Audio Recording App</Text>
-      <TouchableOpacity style={styles.recordButton} onPress={startRecording} disabled={!!recording}>
+      <TouchableOpacity style={[
+    styles.recordButton, 
+    recording && styles.recordButtonDisabled
+  ]}  onPress={startRecording} disabled={!!recording}>
         <Text style={styles.recordButtonText}>Start Recording</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.stopButton} onPress={stopRecording} disabled={!recording}>
@@ -158,8 +162,8 @@ export default function AudioRecording() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "#f7f7f7",
+    
+    backgroundColor: "#fff",
     padding: 20,
   },
   header: {
@@ -196,6 +200,13 @@ const styles = StyleSheet.create({
   },
   recordButton: {
     backgroundColor: "#4caf50",
+    padding: 12,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  recordButtonDisabled: {
+    backgroundColor: "#a5d6a7",
+    opacity: 0.7,
     padding: 12,
     borderRadius: 8,
     marginBottom: 10,
