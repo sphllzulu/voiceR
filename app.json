@@ -19,10 +19,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/MMLogo.jpg",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sphllzulu.voiceR"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0d1f4ca3-8e4a-454e-8196-33570048f8fc"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0d1f4ca3-8e4a-454e-8196-33570048f8fc"
     }
   }
 }
