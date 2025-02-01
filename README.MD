@@ -11,6 +11,9 @@ MicMagic is a powerful and intuitive audio recording mobile application built wi
 - 💬 In-app feedback system
 - 🎨 Custom font integration
 
+## Screenshot
+![Image](https://github.com/user-attachments/assets/144d7f07-373e-4114-9de1-41809bce2191)
+
 ## 🛠️ Prerequisites
 
 Before you begin, ensure you have met the following requirements:
